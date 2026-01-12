@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1k8vmmnnqcrn"]
+
+[ext_resource type="Environment" uid="uid://d0j0gnnhi0bwj" path="res://env.tres" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dab1x3bli3p37" path="res://objects/player.tscn" id="2_0wfyh"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_o5qli")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.712689)
+
+[node name="Player" parent="." instance=ExtResource("2_0wfyh")]

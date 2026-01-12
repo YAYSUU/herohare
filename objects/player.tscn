@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://dab1x3bli3p37"]
+
+[ext_resource type="Script" uid="uid://el8nawnyhau1" path="res://objects/player.gd" id="1_eqqp1"]
+[ext_resource type="Texture2D" uid="uid://cvfdo06hrwcxt" path="res://textures/i.png" id="2_ykyjo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ykyjo"]
+size = Vector3(1, 1.0830078, 0.23657227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykyjo"]
+atlas = ExtResource("2_ykyjo")
+region = Rect2(1200, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmc1l"]
+atlas = ExtResource("2_ykyjo")
+region = Rect2(1200, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f46kd"]
+atlas = ExtResource("2_ykyjo")
+region = Rect2(1600, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rerk"]
+atlas = ExtResource("2_ykyjo")
+region = Rect2(2000, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxov2"]
+atlas = ExtResource("2_ykyjo")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i825w"]
+atlas = ExtResource("2_ykyjo")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rfka"]
+atlas = ExtResource("2_ykyjo")
+region = Rect2(400, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8sra"]
+atlas = ExtResource("2_ykyjo")
+region = Rect2(800, 0, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vq5b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykyjo")
+}],
+"loop": true,
+"name": &"bidle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmc1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f46kd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rerk")
+}],
+"loop": true,
+"name": &"bwalk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxov2")
+}],
+"loop": true,
+"name": &"fidle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i825w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rfka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8sra")
+}],
+"loop": true,
+"name": &"fwalk",
+"speed": 8.0
+}]
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("collision", "sprite")]
+script = ExtResource("1_eqqp1")
+collision = NodePath("Collision")
+sprite = NodePath("Sprite")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.041503906, 0)
+shape = SubResource("BoxShape3D_ykyjo")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.003
+sprite_frames = SubResource("SpriteFrames_4vq5b")
+animation = &"fidle"
