@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		runnin = Input.is_action_pressed("game_cancel")
-		velocity.x = direction.x * (SPEED*2 if runnin else SPEED)
+		velocity.x = direction.x * (SPEED*2.5 if runnin else SPEED*1.5) # gotta go SLIGHTLY FESTER such that MOVING FEELS NOT SLUGGISH!
 		velocity.z = direction.z * (SPEED*2 if runnin else SPEED) # gotta go FEST!
 		if (velocity.z != 0): # This sucks don't change it
 			flipped_z = velocity.z < 0

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1k8vmmnnqcrn"]
+[gd_scene load_steps=5 format=3 uid="uid://c1k8vmmnnqcrn"]
 
 [ext_resource type="AudioStream" uid="uid://ciaey1km0q6s3" path="res://audio/surfacedwellingv2.mp3" id="1_70i1h"]
 [ext_resource type="Environment" uid="uid://d0j0gnnhi0bwj" path="res://env.tres" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dab1x3bli3p37" path="res://objects/player.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://bph4qoi5fw5ui" path="res://objects/test_prop.tscn" id="4_dkner"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -28,3 +29,6 @@ size = Vector3(7.77339, 0.548096, 7.44446)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.77142465, 0.6363207, 0, -0.6363207, 0.77142465, 0, 4.41834, 1.73679)
+
+[node name="TestProp" parent="." instance=ExtResource("4_dkner")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8380999, 0, -1.6527076)
