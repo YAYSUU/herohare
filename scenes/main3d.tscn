@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1k8vmmnnqcrn"]
+
+[ext_resource type="AudioStream" uid="uid://ciaey1km0q6s3" path="res://audio/surfacedwellingv2.mp3" id="1_70i1h"]
+[ext_resource type="Environment" uid="uid://d0j0gnnhi0bwj" path="res://env.tres" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dab1x3bli3p37" path="res://objects/player.tscn" id="2_0wfyh"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_70i1h")
+autoplay = true
+parameters/looping = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_o5qli")
+
+[node name="Player" parent="." instance=ExtResource("2_0wfyh")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49158, -1.0365, -3.60358)
+use_collision = true
+size = Vector3(13.8714, 0.548096, 20.644)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 0.863431, -0.504467, 0, 0.504467, 0.863431, -3.1522, 1.88188, -1.47524)
+use_collision = true
+size = Vector3(7.77339, 0.548096, 7.44446)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.77142465, 0.6363207, 0, -0.6363207, 0.77142465, 0, 4.41834, 1.73679)

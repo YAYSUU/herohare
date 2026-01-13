@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://sdp46h8s3ccl"]
+
+[sub_resource type="GDScript" id="GDScript_6iebj"]
+resource_name = "init"
+script/source = "extends Node
+
+func _ready() -> void:
+	Master.load_scene(\"res://scenes/main3d.tscn\")
+	#Master.load_overlay_scene(\"res://scenes/testoverlay.tscn\")
+"
+
+[node name="Init" type="Node"]
+script = SubResource("GDScript_6iebj")
