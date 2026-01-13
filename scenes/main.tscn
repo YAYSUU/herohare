@@ -25,3 +25,6 @@ size = Vector3(13.8714, 0.548096, 20.644)
 transform = Transform3D(1, 0, 0, 0, 0.863431, -0.504467, 0, 0.504467, 0.863431, -3.1522, 1.88188, -1.47524)
 use_collision = true
 size = Vector3(7.77339, 0.548096, 7.44446)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.77142465, 0.6363207, 0, -0.6363207, 0.77142465, 0, 4.41834, 1.73679)

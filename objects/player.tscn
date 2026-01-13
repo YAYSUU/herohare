@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dab1x3bli3p37"]
 
-[ext_resource type="Script" path="res://objects/player.gd" id="1_eqqp1"]
+[ext_resource type="Script" uid="uid://el8nawnyhau1" path="res://objects/player.gd" id="1_eqqp1"]
 [ext_resource type="Texture2D" uid="uid://cvfdo06hrwcxt" path="res://textures/i.png" id="2_ykyjo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ykyjo"]
@@ -101,6 +101,3 @@ animation = &"fidle"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.992669, 0.120865, 0, -0.120865, 0.992669, 0, 1.01283, 2.44946)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.771425, 0.636321, 0, -0.636321, 0.771425, 0, 4.41834, 1.73679)
